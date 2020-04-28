@@ -11,9 +11,14 @@ html, body {
     box-sizing: inherit;
 }
 
+a   {
+    text-decoration: none;
+}
+
 header {
     background-color: #1554B3;
     position: fixed;
+    top: inherit;
     width: 100%;
     line-height: 1.5;
     font-size: 15px;
@@ -32,6 +37,7 @@ h1  {
 }
 nav {
     float:right;
+    color: azure;
 }
 
 ul  {
@@ -43,6 +49,8 @@ li  {
 }
 
 #background-img {
+    position: fixed;
+    top: initial;
     width: 100%;
     z-index: -1;
 }
