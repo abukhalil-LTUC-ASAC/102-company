@@ -8,7 +8,7 @@
 </head>
 <body>
     <img id="background-img" src="https://66.media.tumblr.com/ec4758998d44d904a6656f73bb686103/tumblr_nk8ssb2kAK1u4jq64o1_1280.png" alt="My Timetable">
-    <p id="float-progress">This is my time</p>
+    <p id="float-progress">Time needed to do first revision!</p>
     <header>
         <h1>The learning project</h1>
         <nav>
@@ -17,7 +17,7 @@
                 <li><a href="#Progress">Progress</a></li>
                 <li><a href="#Table">Table</a></li>
                 <li><a href="#Contact">Contact Us</a></li>
-                <button id="button_name" onclick="myFunction()">Add you name!</button>
+                <button id="button_name" onclick="naming()">Add you name!</button>
             </ul>
         </nav>
     </header>
@@ -49,17 +49,21 @@
         </section>
         <section id="progress" class="tabcontent">
             <article>
-                <section>
-                    <p>Check your learned subjects!</p>
+                <section id="progress_register">
+                    <p>Check your learned subjects, then</p>
+                    <div class="submit-tab tab">
+                        <button id="submit_hours" class="tablinks" onclick="countTime()">Submit</button>
+                    </div>
+                    <p>!</p>
                 </section>
                 <section id="subjects">
                     <details open>
                         <summary>Math</summary>
-                        <input type="checkbox" id="math_1" name="math_1" value=1>
+                        <input class="checkbox" type="checkbox" id="math_1" name="math_1" value="10" onclick="countTime();">
                         <label for="math_1"> Chapter 1</label><br>
-                        <input type="checkbox" id="math_2" name="math_2" value=1>
+                        <input class="checkbox" type="checkbox" id="math_2" name="math_2" value="10" onclick="countTime();">
                         <label for="math_2"> Chapter 2</label><br>
-                        <input type="checkbox" id="math_3" name="math_3" value=1>
+                        <input  class="checkbox" type="checkbox" id="math_3" name="math_3" value="10" onclick="countTime();">
                         <label for="math_3"> Chapter 3</label><br>
                     </details>
                     <details open>
@@ -143,6 +147,7 @@
 
     <script src="js/add-name.js"></script>
     <script>document.getElementById("main").style.display = "block";</script>
+    <script src="js/total-time.js"></script>
     <script src="js/simple-tabs.js"></script>
 </body>
 </html>

@@ -1,9 +1,15 @@
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
 html {
     box-sizing: border-box
 }
 html, body {
     font-family: Verdana,sans-serif;
     margin: 0;
+    animation: fadeEffect 1s;
 }
 *,*:before,*:after {
     box-sizing: inherit;
@@ -84,7 +90,6 @@ main {
 
 .tab {
     overflow: hidden;
-    border: 1px solid #ccc;
     background-color: #f1f1f1;
     padding: 0;
   }
@@ -97,7 +102,7 @@ main {
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
-    transition: 0.3s;
+    transition: 0.6s;
     font-size: 17px;
     }
 
@@ -117,6 +122,8 @@ main {
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
+    -webkit-animation: fadeEffect 3s;
+    animation: fadeEffect 3s;
     }
 
 article {
@@ -138,6 +145,21 @@ article {
 
 img {
     max-width: 100%;
+}
+#progress_register {
+    display: inline-flex;
+}
+.submit-tab{
+    border-radius: 10px;
+    border: none;
+    align-self: center;
+}
+#submit_hours {
+    border-radius: 10px;
+    border: none;
+    padding: 6px;
+    height: min-content;
+    align-self: center;
 }
 
 footer {

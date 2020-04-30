@@ -1,4 +1,4 @@
-function myFunction() {
+function naming() {
     var txt;
     var person = prompt("Please enter your name:", "Harry Potter");
     if (person == null || person == "") {
