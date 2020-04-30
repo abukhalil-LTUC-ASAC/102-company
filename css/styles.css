@@ -15,6 +15,13 @@ html, body {
     width: 100%;
     z-index: -1;
 }
+#float-progress{
+    position: fixed;
+    width: fit-content;
+    color: white;
+    top: 20%;
+    left: 60%;
+}
 header {
     background-color: #2e4363;
     position: fixed;
@@ -27,43 +34,82 @@ header {
     0 2px 10px 0 rgba(0,0,0,0.12);
 }
 
-h1, nav {
-    z-index: 1;
-}
+    h1, nav {
+        z-index: 1;
+    }
 
-h1  {
+    h1  {
+        float: left;
+        color: aliceblue;
+        padding-left: 20px;
+    }
+    nav {
+        padding: 20px;
+        float:right;
+        color: azure;
+    }
+    li a{
+        text-decoration: none;
+        cursor: pointer;
+        color: white;
+    }
+
+    ul  {
+        list-style-type: none;
+    }
+
+    li  {
+        color: aliceblue;
+        display: inline;
+        padding-right: 50px;
+    }
+
+    #button_name {
+        border-radius: 10px;
+    }
+
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+  
+    /* Style the buttons inside the tab */
+    .tab button {
+    background-color: inherit;
     float: left;
-    color: aliceblue;
-    padding-left: 20px;
-}
-nav {
-    padding: 20px;
-    float:right;
-    color: azure;
-}
-a   {
-    text-decoration: none;
+    border: none;
+    outline: none;
     cursor: pointer;
-}
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    }
 
-ul  {
-    list-style-type: none;
-}
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+    background-color: #ddd;
+    }
 
-li a{
-    color: white;
-}
-li  {
-    color: aliceblue;
-    display: inline;
-    padding-right: 50px;
-}
+    /* Create an active/current tablink class */
+    .tab button.active {
+    background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    }
 
 main {
     width: 70%;
     position: absolute;
-    top: 98%;
-    left: 40%;
+    top: 700px;
+    left: 600px;
     margin-top: -100px;
     z-index: -1;
     margin-left: -535px;
