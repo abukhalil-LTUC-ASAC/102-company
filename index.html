@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Learning Project</title>
     <link rel = "stylesheet" type = "text/css" href = "css/styles.css" />
-    <script src="js/add-name.js"></script>
 </head>
 <body>
     <img id="background-img" src="https://66.media.tumblr.com/ec4758998d44d904a6656f73bb686103/tumblr_nk8ssb2kAK1u4jq64o1_1280.png" alt="My Timetable">
@@ -24,23 +23,114 @@
     </header>
 
     <main>
-        <article id="intro">
-            <section>
-                <p>This is where the project is explained.</p>
-            </section>
-            <section>
-                <p>This is where the examples are made.</p>
-            </section>
-        </article>
-        <article id="How">
-            <section>
-                <p>This is where details is used.</p>
-            </section>
-            <section>
-                <img src="https://image.slideserve.com/611620/knowledge-space-theory6-l.jpg" alt="This is how it is done">
-                <p>This is where the examples are made.</p>
-            </section>
-        </article>
+        <div class="tab">
+            <button class="tablinks" onclick="opentab(event, 'main')">Main</button>
+            <button class="tablinks" onclick="opentab(event, 'progress')">Progress</button>
+            <button class="tablinks" onclick="opentab(event, 'timetable')">Detailed Timetable</button>
+          </div>
+        <section id="main" class="tabcontent">
+            <article id="intro">
+                <section>
+                    <p>This is where the project is explained.</p>
+                </section>
+                <section>
+                    <p>This is where the examples are made.</p>
+                </section>
+            </article>
+            <article id="How">
+                <section>
+                    <p>This is where details is used.</p>
+                </section>
+                <section>
+                    <img src="https://image.slideserve.com/611620/knowledge-space-theory6-l.jpg" alt="This is how it is done">
+                    <p>This is where the examples are made.</p>
+                </section>
+            </article>
+        </section>
+        <section id="progress" class="tabcontent">
+            <article>
+                <section>
+                    <p>Check your learned subjects!</p>
+                </section>
+                <section id="subjects">
+                    <details open>
+                        <summary>Math</summary>
+                        <input type="checkbox" id="math_1" name="math_1" value=1>
+                        <label for="math_1"> Chapter 1</label><br>
+                        <input type="checkbox" id="math_2" name="math_2" value=1>
+                        <label for="math_2"> Chapter 2</label><br>
+                        <input type="checkbox" id="math_3" name="math_3" value=1>
+                        <label for="math_3"> Chapter 3</label><br>
+                    </details>
+                    <details open>
+                        <summary>English</summary>
+                        <input type="checkbox" id="math_1" name="math_1" value=1>
+                        <label for="math_1"> Chapter 1</label><br>
+                        <input type="checkbox" id="math_2" name="math_2" value=1>
+                        <label for="math_2"> Chapter 2</label><br>
+                        <input type="checkbox" id="math_3" name="math_3" value=1>
+                        <label for="math_3"> Chapter 3</label><br>
+                    </details>
+                    <details open>
+                        <summary>Science</summary>
+                        <input type="checkbox" id="math_1" name="math_1" value=1>
+                        <label for="math_1"> Chapter 1</label><br>
+                        <input type="checkbox" id="math_2" name="math_2" value=1>
+                        <label for="math_2"> Chapter 2</label><br>
+                        <input type="checkbox" id="math_3" name="math_3" value=1>
+                        <label for="math_3"> Chapter 3</label><br>
+                    </details>
+                    <details open>
+                        <summary>Art</summary>
+                        <input type="checkbox" id="math_1" name="math_1" value=1>
+                        <label for="math_1"> Chapter 1</label><br>
+                        <input type="checkbox" id="math_2" name="math_2" value=1>
+                        <label for="math_2"> Chapter 2</label><br>
+                        <input type="checkbox" id="math_3" name="math_3" value=1>
+                        <label for="math_3"> Chapter 3</label><br>
+                    </details>
+                    <details open>
+                        <summary>Liberal Studies</summary>
+                        <input type="checkbox" id="math_1" name="math_1" value=1>
+                        <label for="math_1"> Chapter 1</label><br>
+                        <input type="checkbox" id="math_2" name="math_2" value=1>
+                        <label for="math_2"> Chapter 2</label><br>
+                        <input type="checkbox" id="math_3" name="math_3" value=1>
+                        <label for="math_3"> Chapter 3</label><br>
+                    </details>
+                    <details open>
+                        <summary>Religion</summary>
+                        <input type="checkbox" id="math_1" name="math_1" value=1>
+                        <label for="math_1"> Chapter 1</label><br>
+                        <input type="checkbox" id="math_2" name="math_2" value=1>
+                        <label for="math_2"> Chapter 2</label><br>
+                        <input type="checkbox" id="math_3" name="math_3" value=1>
+                        <label for="math_3"> Chapter 3</label><br>
+                    </details>
+                </section>
+                <section>
+                    <p>This is where the examples are made.</p>
+                </section>
+            </article>
+        </section>
+        <section id="timetable" class="tabcontent">
+            <article>
+                <section>
+                    <p>This is where the timetable is explained.</p>
+                </section>
+                <section>
+                    <p>This is where the examples are made.</p>
+                </section>
+            </article>
+            <article>
+                <section>
+                    <p>This is where details is used.</p>
+                </section>
+                <section>
+                    <p>This is where the examples are made.</p>
+                </section>
+            </article>
+        </section>
     </main>
 
     <aside>
@@ -50,5 +140,9 @@
     <footer>
         &copy; 2020 The Learning Project
     </footer>
+
+    <script src="js/add-name.js"></script>
+    <script>document.getElementById("main").style.display = "block";</script>
+    <script src="js/simple-tabs.js"></script>
 </body>
 </html>
