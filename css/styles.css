@@ -49,6 +49,10 @@ a   {
 ul  {
     list-style-type: none;
 }
+
+li a{
+    color: white;
+}
 li  {
     color: aliceblue;
     display: inline;
