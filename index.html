@@ -40,6 +40,18 @@
             <article id="How">
                 <section>
                     <p>This is where details is used.</p>
+                    <label for="time">How many hours do you need to study a chapter?</label>
+                    <select id="time" onchange="myTime()">
+                    <option>Select</option>
+                    <option value="1">One hour</option>
+                    <option value="2">Two Hours</option>
+                    <option value="3">Three Hours</option>
+                    <option value="4">Four Hours</option>
+                    </select>
+                    <div id="my_time"></div>
+                    <ol id="myList">
+                        <li></li>
+                    </ol>
                 </section>
                 <section>
                     <img src="https://image.slideserve.com/611620/knowledge-space-theory6-l.jpg" alt="This is how it is done">
@@ -50,15 +62,18 @@
         <section id="progress" class="tabcontent">
             <article>
                 <section id="progress_register">
-                    <p>Check your learned subjects, then</p>
+                    <div class="submit-tab tab">
+                        <button id="add_subjects" class="tablinks" onclick="addSub()">Add</button>
+                    </div>
+                    <p style="padding: 4px;">Add the subjects first, check your learned subjects, then </p>
                     <div class="submit-tab tab">
                         <button id="submit_hours" class="tablinks" onclick="countTime()">Submit</button>
                     </div>
                     <p>!</p>
                 </section>
                 <section id="subjects">
-                    <details open>
-                        <summary>Math</summary>
+                    <details open style="display: none;" id="math">
+                        <summary >Math</summary>
                         <input class="checkbox" type="checkbox" id="math_1" name="math_1" value="10" onclick="countTime();">
                         <label for="math_1"> Chapter 1</label><br>
                         <input class="checkbox" type="checkbox" id="math_2" name="math_2" value="10" onclick="countTime();">
@@ -66,7 +81,7 @@
                         <input  class="checkbox" type="checkbox" id="math_3" name="math_3" value="10" onclick="countTime();">
                         <label for="math_3"> Chapter 3</label><br>
                     </details>
-                    <details open>
+                    <details open style="display: none;" id="english">
                         <summary>English</summary>
                         <input type="checkbox" id="math_1" name="math_1" value=1>
                         <label for="math_1"> Chapter 1</label><br>
@@ -75,7 +90,7 @@
                         <input type="checkbox" id="math_3" name="math_3" value=1>
                         <label for="math_3"> Chapter 3</label><br>
                     </details>
-                    <details open>
+                    <details open style="display: none;" id="science">
                         <summary>Science</summary>
                         <input type="checkbox" id="math_1" name="math_1" value=1>
                         <label for="math_1"> Chapter 1</label><br>
@@ -84,7 +99,7 @@
                         <input type="checkbox" id="math_3" name="math_3" value=1>
                         <label for="math_3"> Chapter 3</label><br>
                     </details>
-                    <details open>
+                    <details open style="display: none;" id="art">
                         <summary>Art</summary>
                         <input type="checkbox" id="math_1" name="math_1" value=1>
                         <label for="math_1"> Chapter 1</label><br>
@@ -93,7 +108,7 @@
                         <input type="checkbox" id="math_3" name="math_3" value=1>
                         <label for="math_3"> Chapter 3</label><br>
                     </details>
-                    <details open>
+                    <details open style="display: none;" id="ls">
                         <summary>Liberal Studies</summary>
                         <input type="checkbox" id="math_1" name="math_1" value=1>
                         <label for="math_1"> Chapter 1</label><br>
@@ -102,7 +117,7 @@
                         <input type="checkbox" id="math_3" name="math_3" value=1>
                         <label for="math_3"> Chapter 3</label><br>
                     </details>
-                    <details open>
+                    <details open style="display: none;" id="religion">
                         <summary>Religion</summary>
                         <input type="checkbox" id="math_1" name="math_1" value=1>
                         <label for="math_1"> Chapter 1</label><br>
@@ -149,5 +164,9 @@
     <script>document.getElementById("main").style.display = "block";</script>
     <script src="js/total-time.js"></script>
     <script src="js/simple-tabs.js"></script>
+    <script src="js/add-subjects.js"></script>
+    <script src="js/repeating_add.js" ></script>
+
+
 </body>
 </html>

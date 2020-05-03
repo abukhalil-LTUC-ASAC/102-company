@@ -154,7 +154,7 @@ img {
     border: none;
     align-self: center;
 }
-#submit_hours {
+#submit_hours, #add_subjects {
     border-radius: 10px;
     border: none;
     padding: 6px;
